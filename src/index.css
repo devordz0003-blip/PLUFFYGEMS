@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Bodoni Moda", "Georgia", serif;
+  --font-display: var(--font-serif);
+  
+  --color-primary: #B0926A;
+  --color-primary-hover: #8E7656;
+  --color-secondary: #1A1A1A;
+  --color-accent: #B0926A;
+  --color-pet-bg: #0D0D0D;
+  --color-surface: #1A1A1A;
+  --color-text-muted: #8C8C8C;
+}
+
+body {
+  @apply bg-pet-bg text-[#E6E6E6] font-sans transition-colors duration-300;
+}
+
+h1, h2, h3, h4 {
+  @apply font-serif font-light tracking-tight;
+}
+

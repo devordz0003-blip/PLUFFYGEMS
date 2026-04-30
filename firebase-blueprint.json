@@ -1,0 +1,37 @@
+{
+  "entities": {
+    "users": {
+      "title": "User",
+      "description": "User profiles and preferences",
+      "type": "object",
+      "properties": {
+        "displayName": {
+          "type": "string",
+          "description": "User's full name"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "User's email address"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Account creation timestamp"
+        },
+        "role": {
+          "type": "string",
+          "enum": ["user", "admin"],
+          "description": "User's role in the system"
+        }
+      },
+      "required": ["email", "createdAt", "role"]
+    }
+  },
+  "firestore": {
+    "users/{userId}": {
+      "schema": "users",
+      "description": "Access to private user profile data"
+    }
+  }
+}
